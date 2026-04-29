@@ -1,0 +1,9 @@
+class Solution {
+    public int findMin(int[] nums) {
+        int left =0;
+        int right =nums.length-1;
+        //while(left<right){}
+        Arrays.sort(nums);
+        return nums[0];
+    }
+}
