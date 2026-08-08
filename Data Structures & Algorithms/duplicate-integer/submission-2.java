@@ -1,5 +1,12 @@
-class Solution {
+public class Solution {
     public boolean hasDuplicate(int[] nums) {
-        return !Arrays.equals(nums,(Arrays.stream(nums).distinct().toArray()));
+        Set<Integer> seen = new HashSet<>();
+        for (int num : nums) {
+            if (!seen.add(num)) {
+                return true;
+            }
+            //seen.add(num);
+        }
+        return false;
     }
 }
